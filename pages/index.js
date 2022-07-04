@@ -27,10 +27,10 @@ export default function Home() {
         if (json.message == "success") {
           swal(
             "congrats!",
-            "link was copied!: https://9x.now.sh/" + json.name,
+            "link was copied!: http://localhost:3000/" + json.name,
             "success"
           );
-          copy("https://9x.now.sh/" + json.name);
+          copy("http://localhost:3000/" + json.name);
         } else {
           swal("oops!", json.message, "warning");
         }

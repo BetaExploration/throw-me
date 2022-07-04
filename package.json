@@ -5,7 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migrate": "prisma migrate dev"
   },
   "dependencies": {
     "@babel/core": "^7.17.10",
@@ -14,6 +15,7 @@
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@prisma/client": "^3.14.0",
+    "cookies-next": "^2.1.1",
     "copy-text-to-clipboard": "^3.0.1",
     "fetch": "^1.1.0",
     "framer-motion": "^6",
