@@ -57,13 +57,11 @@ export default function Home() {
           Throw-Me
           <div style={{ fontSize: "1rem" }}>( it&apos;s a url shortner )</div>
         </h1>
-        <p className={styles.description}>
-          don&apos;t worry we&apos;ll throw you well.
-        </p>
+
         <form onSubmit={registerUser}>
           <div className={styles.input_cont}>
             <Input
-              placeholder="google ( optional )"
+              placeholder="google"
               id="name"
               name="name"
               value={name}
@@ -71,6 +69,7 @@ export default function Home() {
               type="text"
               minLength="3"
               maxLength="20"
+              required
             />
             <Input
               placeholder="https://google.com/"
@@ -97,10 +96,6 @@ export default function Home() {
           </div>
         </form>
 
-        <Box boxShadow="xl" p="5" rounded="md">
-          <span style={{ color: "#38B2AC" }}>Pro-Tip: </span> bookmark 🔖 this
-          page for quick access!
-        </Box>
       </main>
 
       <footer className={styles.footer}>

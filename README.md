@@ -1,8 +1,17 @@
 # Noble Interview Task
 
+### Setup
+
+- `npm install` to install dependencies
+- `npm run dev` to run the server
+- Open `localhost:3000`
+
+
 ### Part 1
 
-Create a page /urls which displays a simple table of all URLs. Only display the name and url columns and sort by name.
+Create a page /urls which displays a simple table of all URLs.
+Only display the name and url columns and sort by name.
+Create a pages/api function to fetch them and use `fetch` on the frontend to call it.
 
 
 ### Part 2
@@ -12,12 +21,10 @@ Add an input to the top of the /urls page. Filter the urls on the frontend by se
 
 ### Part 3
 
-- Add a user table with id and address (string). Primary key id can be added using `id Int @id`
-- Allow users on the homepage to "Connect Wallet" which triggers metamask to sign a message validating ownership of their wallet address. A static message is fine. ethers.js would be good.
-- A `/api/login` route should validate the signature. If valid, create a cookie for the user using https://github.com/andreizanik/cookies-next
+- Use ethers.js to allow users on the homepage to "Connect Wallet". Show their wallet address at the top of the page. 
+- Change the urls table to include a string for the creators wallet.
+- Require the user to sign a message to prove they own that wallet when submitting a link and verify the message before storing it.
 
 ### Part 4
 
-- Modify the urls table to include an optional userId which relates to the user table.
-- When posting with `/api/create`, if there is a valid user signed in, create the URL connected to the user.
-- Change the `/urls` page from part 1 to only show urls created by the user.
+Change the `/urls` page from part 1 to only fetch the urls created by the connected wallet.
